@@ -101,14 +101,14 @@ const Index = () => {
 
   if (currentView === 'auth') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-white mb-2">União Fanini RM</h1>
-            <p className="text-blue-200">Acesse sua conta de investimentos</p>
+            <p className="text-emerald-200">Acesse sua conta de investimentos</p>
           </div>
           
-          <Card className="glass-effect border-white/20">
+          <Card className="glass-effect border-emerald-500/20">
             <CardHeader>
               <Tabs value={authMode} onValueChange={(value) => setAuthMode(value as 'login' | 'register')}>
                 <TabsList className="grid w-full grid-cols-2">
@@ -128,7 +128,7 @@ const Index = () => {
                 <Button 
                   variant="ghost" 
                   onClick={() => setCurrentView('landing')}
-                  className="text-blue-200 hover:text-white"
+                  className="text-emerald-200 hover:text-white"
                 >
                   ← Voltar ao início
                 </Button>
@@ -141,16 +141,16 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10" />
         <div className="relative container mx-auto px-4 py-20">
           <div className="text-center animate-fade-in">
             <h1 className="hero-title mb-6">
               União Fanini RM
             </h1>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-emerald-200 mb-8 max-w-2xl mx-auto">
               Sistema avançado de distribuição de valores de operações financeiras na B3. 
               Invista com segurança e acompanhe seus rendimentos em tempo real.
             </p>
@@ -163,7 +163,7 @@ const Index = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 text-lg px-8 py-4"
+                className="bg-white/10 border-emerald-500/30 text-white hover:bg-emerald-500/20 text-lg px-8 py-4"
               >
                 Saiba Mais
               </Button>
@@ -176,7 +176,7 @@ const Index = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Funcionalidades Premium</h2>
-          <p className="text-blue-200 text-lg">Tudo que você precisa para gerenciar seus investimentos</p>
+          <p className="text-emerald-200 text-lg">Tudo que você precisa para gerenciar seus investimentos</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -186,7 +186,7 @@ const Index = () => {
                 <ArrowUp className="h-6 w-6 text-white" />
               </div>
               <CardTitle className="text-white">Reinvestimento Automático</CardTitle>
-              <CardDescription className="text-blue-200">
+              <CardDescription className="text-emerald-200">
                 Configure reinvestimentos automáticos e maximize seus rendimentos sem esforço
               </CardDescription>
             </CardHeader>
@@ -198,7 +198,7 @@ const Index = () => {
                 <ArrowDown className="h-6 w-6 text-white" />
               </div>
               <CardTitle className="text-white">Saques Inteligentes</CardTitle>
-              <CardDescription className="text-blue-200">
+              <CardDescription className="text-emerald-200">
                 Solicite saques de lucros instantâneos ou de valor investido com aprovação
               </CardDescription>
             </CardHeader>
@@ -210,7 +210,7 @@ const Index = () => {
                 <div className="w-6 h-6 bg-white rounded" />
               </div>
               <CardTitle className="text-white">Painel Administrativo</CardTitle>
-              <CardDescription className="text-blue-200">
+              <CardDescription className="text-emerald-200">
                 Controle total com configurações dinâmicas e aprovações de transações
               </CardDescription>
             </CardHeader>
@@ -222,28 +222,28 @@ const Index = () => {
           <Card className="financial-card text-center">
             <CardHeader>
               <CardTitle className="financial-metric">2.5%</CardTitle>
-              <CardDescription className="text-blue-200">Rendimento Diário Médio</CardDescription>
+              <CardDescription className="text-emerald-200">Rendimento Diário Médio</CardDescription>
             </CardHeader>
           </Card>
           
           <Card className="financial-card text-center">
             <CardHeader>
               <CardTitle className="financial-metric">R$ 2.8M</CardTitle>
-              <CardDescription className="text-blue-200">Volume Total Investido</CardDescription>
+              <CardDescription className="text-emerald-200">Volume Total Investido</CardDescription>
             </CardHeader>
           </Card>
           
           <Card className="financial-card text-center">
             <CardHeader>
               <CardTitle className="financial-metric">30</CardTitle>
-              <CardDescription className="text-blue-200">Investidores Ativos</CardDescription>
+              <CardDescription className="text-emerald-200">Investidores Ativos</CardDescription>
             </CardHeader>
           </Card>
           
           <Card className="financial-card text-center">
             <CardHeader>
               <CardTitle className="financial-metric">99.9%</CardTitle>
-              <CardDescription className="text-blue-200">Uptime da Plataforma</CardDescription>
+              <CardDescription className="text-emerald-200">Uptime da Plataforma</CardDescription>
             </CardHeader>
           </Card>
         </div>
@@ -254,26 +254,26 @@ const Index = () => {
         <Card className="financial-card max-w-2xl mx-auto">
           <CardHeader>
             <CardTitle className="text-white text-center">Demonstração do Sistema</CardTitle>
-            <CardDescription className="text-blue-200 text-center">
+            <CardDescription className="text-emerald-200 text-center">
               Use essas credenciais para testar diferentes níveis de acesso:
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="text-center p-3 bg-white/5 rounded-lg">
-                <p className="text-green-400 font-semibold">Investidor</p>
-                <p className="text-blue-200">investor@test.com</p>
-                <p className="text-blue-200">senha: qualquer</p>
+              <div className="text-center p-3 bg-white/5 rounded-lg border border-emerald-500/20">
+                <p className="text-emerald-400 font-semibold">Investidor</p>
+                <p className="text-emerald-200">investor@test.com</p>
+                <p className="text-emerald-200">senha: qualquer</p>
               </div>
-              <div className="text-center p-3 bg-white/5 rounded-lg">
+              <div className="text-center p-3 bg-white/5 rounded-lg border border-emerald-500/20">
                 <p className="text-yellow-400 font-semibold">Admin</p>
-                <p className="text-blue-200">admin@test.com</p>
-                <p className="text-blue-200">senha: qualquer</p>
+                <p className="text-emerald-200">admin@test.com</p>
+                <p className="text-emerald-200">senha: qualquer</p>
               </div>
-              <div className="text-center p-3 bg-white/5 rounded-lg">
+              <div className="text-center p-3 bg-white/5 rounded-lg border border-emerald-500/20">
                 <p className="text-red-400 font-semibold">Super Admin</p>
-                <p className="text-blue-200">superadmin@test.com</p>
-                <p className="text-blue-200">senha: qualquer</p>
+                <p className="text-emerald-200">superadmin@test.com</p>
+                <p className="text-emerald-200">senha: qualquer</p>
               </div>
             </div>
           </CardContent>

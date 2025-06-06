@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -47,7 +46,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Card className="financial-card">
           <CardHeader className="pb-2">
-            <CardDescription className="text-blue-200">Total de Usuários</CardDescription>
+            <CardDescription className="text-emerald-200">Total de Usuários</CardDescription>
             <CardTitle className="text-2xl font-bold text-white">
               {systemStats.totalUsers}
             </CardTitle>
@@ -56,8 +55,8 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
 
         <Card className="financial-card">
           <CardHeader className="pb-2">
-            <CardDescription className="text-blue-200">Total Investido</CardDescription>
-            <CardTitle className="text-2xl font-bold text-green-400">
+            <CardDescription className="text-emerald-200">Total Investido</CardDescription>
+            <CardTitle className="text-2xl font-bold text-emerald-400">
               R$ {systemStats.totalInvested.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </CardTitle>
           </CardHeader>
@@ -65,8 +64,8 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
 
         <Card className="financial-card">
           <CardHeader className="pb-2">
-            <CardDescription className="text-blue-200">Lucros Gerados</CardDescription>
-            <CardTitle className="text-2xl font-bold text-green-400">
+            <CardDescription className="text-emerald-200">Lucros Gerados</CardDescription>
+            <CardTitle className="text-2xl font-bold text-emerald-400">
               R$ {systemStats.totalProfits.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </CardTitle>
           </CardHeader>
@@ -74,7 +73,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
 
         <Card className="financial-card">
           <CardHeader className="pb-2">
-            <CardDescription className="text-blue-200">Saques Pendentes</CardDescription>
+            <CardDescription className="text-emerald-200">Saques Pendentes</CardDescription>
             <CardTitle className="text-2xl font-bold text-yellow-400">
               R$ {systemStats.pendingWithdrawals.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
             </CardTitle>
@@ -87,7 +86,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
         <Card className="financial-card">
           <CardHeader>
             <CardTitle className="text-white">Configurações do Sistema</CardTitle>
-            <CardDescription className="text-blue-200">
+            <CardDescription className="text-emerald-200">
               Configure os parâmetros principais do sistema
             </CardDescription>
           </CardHeader>
@@ -99,7 +98,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
                 type="number"
                 value={dailyYield}
                 onChange={(e) => setDailyYield(parseFloat(e.target.value))}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-slate-800/50 border-emerald-500/30 text-white"
                 step="0.1"
               />
             </div>
@@ -111,7 +110,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
                 type="number"
                 value={bonusRate}
                 onChange={(e) => setBonusRate(parseFloat(e.target.value))}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-slate-800/50 border-emerald-500/30 text-white"
                 step="0.1"
               />
             </div>
@@ -123,7 +122,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
                 type="number"
                 value={withdrawalFee}
                 onChange={(e) => setWithdrawalFee(parseFloat(e.target.value))}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-slate-800/50 border-emerald-500/30 text-white"
                 step="0.1"
               />
             </div>
@@ -135,7 +134,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
                 type="number"
                 value={withdrawalDays}
                 onChange={(e) => setWithdrawalDays(parseInt(e.target.value))}
-                className="bg-white/10 border-white/20 text-white"
+                className="bg-slate-800/50 border-emerald-500/30 text-white"
               />
             </div>
 
@@ -149,7 +148,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
         <Card className="financial-card">
           <CardHeader>
             <CardTitle className="text-white">Controles de Funcionalidades</CardTitle>
-            <CardDescription className="text-blue-200">
+            <CardDescription className="text-emerald-200">
               Ative ou desative funcionalidades do sistema
             </CardDescription>
           </CardHeader>
@@ -157,7 +156,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
             <div className="flex items-center justify-between">
               <div>
                 <Label htmlFor="autoWithdraw" className="text-white">Saques Automáticos</Label>
-                <p className="text-sm text-blue-200">Habilitar processamento automático de saques</p>
+                <p className="text-sm text-emerald-200">Habilitar processamento automático de saques</p>
               </div>
               <Switch
                 id="autoWithdraw"
@@ -169,7 +168,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
             <div className="flex items-center justify-between">
               <div>
                 <Label htmlFor="support" className="text-white">Suporte por Chat</Label>
-                <p className="text-sm text-blue-200">Sistema de tickets e chat de suporte</p>
+                <p className="text-sm text-emerald-200">Sistema de tickets e chat de suporte</p>
               </div>
               <Switch
                 id="support"
@@ -181,7 +180,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
             <div className="flex items-center justify-between">
               <div>
                 <Label htmlFor="whatsapp" className="text-white">Suporte WhatsApp</Label>
-                <p className="text-sm text-blue-200">Integração com WhatsApp Business</p>
+                <p className="text-sm text-emerald-200">Integração com WhatsApp Business</p>
               </div>
               <Switch
                 id="whatsapp"
@@ -190,7 +189,7 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
               />
             </div>
 
-            <div className="border-t border-white/10 pt-4">
+            <div className="border-t border-emerald-500/20 pt-4">
               <Button className="financial-button-success w-full">
                 Atualizar Configurações
               </Button>
@@ -203,22 +202,22 @@ export const AdminDashboard = ({ user }: AdminDashboardProps) => {
       <Card className="financial-card">
         <CardHeader>
           <CardTitle className="text-white">Saques Pendentes de Aprovação</CardTitle>
-          <CardDescription className="text-blue-200">
+          <CardDescription className="text-emerald-200">
             Solicitações de saque que precisam de aprovação manual
           </CardDescription>
         </CardHeader>
         <CardContent>
           {pendingWithdrawals.length === 0 ? (
-            <p className="text-center text-blue-200 py-8">
+            <p className="text-center text-emerald-200 py-8">
               Nenhuma solicitação de saque pendente
             </p>
           ) : (
             <div className="space-y-4">
               {pendingWithdrawals.map((withdrawal) => (
-                <div key={withdrawal.id} className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <div key={withdrawal.id} className="flex items-center justify-between p-4 bg-slate-800/30 rounded-lg border border-emerald-500/20">
                   <div>
                     <p className="text-white font-medium">{withdrawal.user}</p>
-                    <p className="text-blue-200 text-sm">
+                    <p className="text-emerald-200 text-sm">
                       Saque {withdrawal.type === 'root' ? 'de Raiz' : 'de Lucro'} - {withdrawal.date}
                     </p>
                   </div>

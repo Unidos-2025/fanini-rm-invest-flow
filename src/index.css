@@ -5,44 +5,44 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 220 15% 8%;
+    --foreground: 210 40% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 210 40% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 210 40% 95%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 355 100% 97%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 14% 20%;
+    --secondary-foreground: 210 40% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 220 14% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 220 14% 20%;
+    --accent-foreground: 210 40% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 217 91% 60%;
+    --border: 220 13% 25%;
+    --input: 220 13% 25%;
+    --ring: 142 76% 36%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 355 100% 97%;
+    --sidebar-accent: 220 14% 20%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 220 13% 25%;
+    --sidebar-ring: 142 76% 36%;
   }
 }
 
@@ -59,19 +59,19 @@
 
 @layer components {
   .financial-card {
-    @apply bg-gradient-card backdrop-blur-sm border border-white/10 rounded-xl shadow-lg;
+    @apply bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-emerald-500/20 rounded-xl shadow-2xl;
   }
   
   .financial-button-primary {
-    @apply bg-gradient-financial text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-emerald-500 hover:to-emerald-400;
   }
   
   .financial-button-success {
-    @apply bg-gradient-success text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-green-500 hover:to-green-400;
   }
   
   .financial-button-danger {
-    @apply bg-gradient-danger text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:from-red-500 hover:to-red-400;
   }
   
   .glow-effect {
@@ -79,18 +79,18 @@
   }
   
   .hero-title {
-    @apply text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-green-500 bg-clip-text text-transparent animate-fade-in;
+    @apply text-6xl font-bold bg-gradient-to-r from-emerald-400 via-cyan-400 to-green-400 bg-clip-text text-transparent animate-fade-in;
   }
   
   .financial-metric {
-    @apply text-3xl font-bold text-green-400 animate-bounce-gentle;
+    @apply text-3xl font-bold text-emerald-400 animate-bounce-gentle;
   }
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(52, 211, 153, 0.2);
 }
 
 .floating-animation {
@@ -107,8 +107,8 @@
 }
 
 .chart-container {
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(6, 78, 59, 0.2) 0%, rgba(5, 150, 105, 0.1) 100%);
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.2);
 }

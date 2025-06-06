@@ -70,14 +70,14 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
             <span className="text-white font-bold text-sm">UF</span>
           </div>
           <div>
-            <h2 className="font-bold text-sm">União Fanini RM</h2>
-            <p className="text-xs text-muted-foreground">{user.name}</p>
+            <h2 className="font-bold text-sm text-white">União Fanini RM</h2>
+            <p className="text-xs text-emerald-200">{user.name}</p>
           </div>
         </div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Menu Principal</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-emerald-200">Menu Principal</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {getMenuItems().map((item) => (
@@ -85,6 +85,7 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
                   <SidebarMenuButton 
                     onClick={() => setCurrentPage(item.id)}
                     isActive={currentPage === item.id}
+                    className="text-white hover:text-emerald-300 hover:bg-emerald-500/10"
                   >
                     <span className="mr-2">{item.icon}</span>
                     <span>{item.label}</span>
@@ -99,7 +100,7 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton onClick={onLogout} className="text-red-400 hover:text-red-300">
+                <SidebarMenuButton onClick={onLogout} className="text-red-400 hover:text-red-300 hover:bg-red-500/10">
                   <span className="mr-2">🚪</span>
                   <span>Sair</span>
                 </SidebarMenuButton>
@@ -127,13 +128,13 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
         <AppSidebar />
         <main className="flex-1 flex flex-col">
           {/* Header */}
-          <header className="bg-slate-800 border-b border-slate-700 p-4">
+          <header className="bg-slate-800 border-b border-emerald-500/20 p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <SidebarTrigger className="text-white" />
+                <SidebarTrigger className="text-white hover:text-emerald-300" />
                 <div>
                   <h1 className="text-xl font-bold text-white">União Fanini RM</h1>
-                  <p className="text-sm text-slate-400">Sistema de Investimentos B3</p>
+                  <p className="text-sm text-emerald-200">Sistema de Investimentos B3</p>
                 </div>
               </div>
               
@@ -154,7 +155,7 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
           </header>
 
           {/* Content */}
-          <div className="flex-1 p-6 overflow-auto">
+          <div className="flex-1 p-6 overflow-auto bg-slate-900">
             {children}
           </div>
         </main>

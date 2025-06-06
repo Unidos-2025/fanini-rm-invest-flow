@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				financial: {
-					primary: '#1e40af',
-					secondary: '#059669',
+					primary: '#059669',
+					secondary: '#34d399',
 					accent: '#dc2626',
 					success: '#16a34a',
-					warning: '#ca8a04',
+					warning: '#f59e0b',
 					danger: '#dc2626'
 				}
 			},
@@ -114,10 +114,10 @@ export default {
 				},
 				'pulse-glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)'
+						boxShadow: '0 0 20px rgba(52, 211, 153, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px rgba(59, 130, 246, 0.6)'
+						boxShadow: '0 0 40px rgba(52, 211, 153, 0.6)'
 					}
 				},
 				'bounce-gentle': {
@@ -138,8 +138,8 @@ export default {
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'gradient-financial': 'linear-gradient(135deg, #1e40af 0%, #059669 100%)',
-				'gradient-card': 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+				'gradient-financial': 'linear-gradient(135deg, #059669 0%, #34d399 100%)',
+				'gradient-card': 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
 				'gradient-success': 'linear-gradient(135deg, #16a34a 0%, #059669 100%)',
 				'gradient-danger': 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)'
 			}
