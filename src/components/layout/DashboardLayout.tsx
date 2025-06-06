@@ -15,6 +15,10 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel
 } from "@/components/ui/sidebar";
+import { InvestmentPage } from "@/components/pages/InvestmentPage";
+import { StatementPage } from "@/components/pages/StatementPage";
+import { WithdrawPage } from "@/components/pages/WithdrawPage";
+import { SupportPage } from "@/components/pages/SupportPage";
 
 interface User {
   id: string;
@@ -60,6 +64,22 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
     }
 
     return baseItems;
+  };
+
+  const renderPageContent = () => {
+    switch (currentPage) {
+      case 'investimentos':
+        return <InvestmentPage user={user} />;
+      case 'extrato':
+        return <StatementPage user={user} />;
+      case 'saques':
+        return <WithdrawPage user={user} />;
+      case 'suporte':
+        return <SupportPage user={user} />;
+      case 'dashboard':
+      default:
+        return children;
+    }
   };
 
   const AppSidebar = () => (
@@ -156,7 +176,7 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
 
           {/* Content */}
           <div className="flex-1 p-6 overflow-auto bg-slate-900">
-            {children}
+            {renderPageContent()}
           </div>
         </main>
       </div>
