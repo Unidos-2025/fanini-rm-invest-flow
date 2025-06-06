@@ -67,6 +67,23 @@ export const InvestmentPage = ({ user }: InvestmentPageProps) => {
         </div>
       </div>
 
+      {/* Saldo Disponível - Destaque na página */}
+      <Card className="financial-card border-emerald-500/50 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10">
+        <CardHeader className="pb-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <CardDescription className="text-emerald-200">Saldo Disponível para Investimento</CardDescription>
+              <CardTitle className="text-3xl font-bold text-emerald-400">
+                R$ {user.availableProfit.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+              </CardTitle>
+            </div>
+            <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center">
+              <Wallet className="h-8 w-8 text-emerald-400" />
+            </div>
+          </div>
+        </CardHeader>
+      </Card>
+
       {/* Investment Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="financial-card">

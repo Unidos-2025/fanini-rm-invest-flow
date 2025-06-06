@@ -19,6 +19,7 @@ import { InvestmentPage } from "@/components/pages/InvestmentPage";
 import { StatementPage } from "@/components/pages/StatementPage";
 import { WithdrawPage } from "@/components/pages/WithdrawPage";
 import { SupportPage } from "@/components/pages/SupportPage";
+import { Wallet } from "lucide-react";
 
 interface User {
   id: string;
@@ -92,6 +93,19 @@ export const DashboardLayout = ({ children, user, onLogout }: DashboardLayoutPro
           <div>
             <h2 className="font-bold text-sm text-white">União Fanini RM</h2>
             <p className="text-xs text-emerald-200">{user.name}</p>
+          </div>
+        </div>
+        
+        {/* Saldo no menu */}
+        <div className="px-4 py-2 border-t border-emerald-500/20">
+          <div className="flex items-center gap-2 p-2 bg-emerald-500/10 rounded-lg">
+            <Wallet className="h-4 w-4 text-emerald-400" />
+            <div>
+              <p className="text-xs text-emerald-200">Saldo Disponível</p>
+              <p className="text-sm font-bold text-white">
+                R$ {user.availableProfit.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+              </p>
+            </div>
           </div>
         </div>
       </SidebarHeader>
